@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Series</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,400&family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    html{
+        font-size: 32px;
+    }
+    img{
+        width: 100%;
+        height: auto;
+    }
+    a{
+        text-decoration: none;
+        font-family: var(--Roboto);
+        text-transform: uppercase;
+        margin-inline: 0.7em;
+        color: blue
+    }
+    :root{
+        --r_fuerte: #692e25;
+        --r_claro: #F8CDC7;
+        --r_superclaro: #FADEDA;
+        --r_oscuro: #86443A;
+        --Roboto: 'Roboto', sans-serif;
+        --Merriweather:'Merriweather', serif;
+        --negrita: 700;
+    }
+    .container{
+        padding: 0 2em;
+        flex-direction: column;
+    }
+    body>header{
+        display: flex;
+        padding: 100px 250px;
+        text-align: center;
+        height: 100vh;
+        background-color: var(--r_claro);
+    }
+    #Portadas{
+        background-color: var(--r_superclaro);
+    }
+    #Plataformas{
+        background-color: var(--r_claro);
+    }
+    #Redessociales{
+        background-color: var(--r_superclaro);
+    }
+    h1{
+        font-family: var(--Roboto);
+        font-size: 1.7em;
+        font-weight: var(--negrita);
+        color: var(--r_fuerte);
+        margin-bottom: 0.3em;
+    }
+    h2{
+        font-size: 1.1em;
+        font-family: var(--Merriweather);
+        color: var(--r_oscuro);
+        margin-left: 3em;
+        margin-right: 3em;
+        margin-bottom: 10em;
+    }
+    h3{
+        font-family: var(--Roboto);
+        padding: 0 2em;
+        margin-bottom: 0.2em;
+    }
+    h4{
+        font-size: 0.5em;
+        font-family: var(--Merriweather);
+    }
+    h5{
+        font-size: 0.5em;
+        font-family: var(--Merriweather);
+        padding: 0 4.8em;
+    }
+    blockquote{
+        font-size: 0.45em;
+        font-family: var(--Roboto);
+        padding: 0 1.8em;
+    }
+    nav a{
+        font-size: 0.75em;
+    }
+    section:first-child{
+        height: 100%;
+        background-color: var(--r_superclaro);
+        color: var(--r_oscuro);
+    }
+    section:first-child .container{
+        display: flex;
+    }
+/*Portadas*/
+    .cover{
+        padding: 1.2em;
+        margin: 0.5em;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        min-width: 200px;
+        width: 400px;
+        max-height: 450px;
+        flex-grow: 1;
+        background-color: var(--r_claro);
+    }
+    .cover_img{
+        width: 100%;
+        height: 200px;
+        display: flex;
+    }
+    .cover_img img{
+        object-fit: cover;
+        object-position: center;
+    }
+    .cover header h4{
+        font-family: var(--Merriweather);
+        font-size: 0.5em;
+        color: var(--r_oscuro);
+    }
+    .cover header{
+        width: 100%;
+        background-color: var(--r_superclaro);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+    }
+    .cover h3{
+        padding: 0.5em;
+        font-family: var(--Merriweather);
+        color: var(--r_oscuro);
+    }
+    section:last-child{
+            height: 80vh;
+            color: var(--r_oscuro);
+            background-color: var(--r_claro);
+    }
+    footer{
+        height: 50vh;
+        background-color: var(--r_superclaro);
+        color: var(--r_oscuro);
+    }
+    .grupo1{
+        display: flex;
+        flex-direction: row;
+    }
+    .grupo2{
+        display: flex;
+        flex-direction: row;
+    }
+/*Plataformas*/
+    .plataformas{
+        display: flex;
+        flex-direction: column;
+        box-shadow: var(--r_oscuro) 0px 0px 10px 0px;
+        width: 300px;
+        height: 400px;
+        margin: 1em;
+        align-items: center
+    }
+    .plataformas_img{
+        width: 200px;
+        height: 200px;
+        margin-top: 1em;
+        margin-bottom: 0.5em;
+    }
+    .plataformas h4, blockquote{
+        text-align: center;
+        margin: 0.5em;
+    }
+    .plataformas_img img{
+        border-radius: 200px;
+        object-fit: cover;
+        height: 100%;
+    }
+    .containerp{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+</style>
+</head>
+<body>
+    <header>
+        <div class="container2">
+            <hgroup>
+                <h1>Portadas de series</h1>
+                <h2>
+                    "Colección de fotos de las series más famosas en la actualidad"
+                </h2>
+            </hgroup>
+            <nav>
+                <a href="#Portadas">Portadas</a>
+                <a href="#Plataformas">Plataformas</a>
+                <a href="#Redessociales">Redes sociales</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="#Portadas">
+            <h3>Portadas</h3>
+            <div class="container">
+                <div class="grupo1">
+                    <div class="cover">
+                        <div class="cover_img">
+                            <img src="img/Portadas/GOT.jpg" alt="">
+                        </div>
+                        <header>
+                            <h4>Game of Thrones</h4>
+                        </header>
+                    </div>
+                    <div class="cover">
+                        <div class="cover_img">
+                            <img src="img/Portadas/TVD.jpg" alt="">
+                        </div>
+                        <header>
+                            <h4>The Vampire Diaries</h4>
+                        </header>
+                    </div>
+                    <div class="cover">
+                        <div class="cover_img">
+                            <img src="img/Portadas/THE100.jpg" alt="">
+                        </div>
+                        <header>
+                            <h4>The 100</h4>
+                        </header>
+                    </div>
+                    <div class="cover">
+                        <div class="cover_img">
+                            <img src="img/Portadas/TheWalkingDead.jpg" alt="">
+                        </div>
+                        <header>
+                            <h4>The Walking Dead</h4>
+                        </header>
+                    </div>
+                    <div class="cover">
+                        <div class="cover_img">
+                            <img src="img/Portadas/Dark.jpg" alt="">
+                        </div>
+                        <header>
+                            <h4>Dark</h4>
+                        </header>
+                    </div>                    
+                </div>
+                <div class="grupo2">
+                    <div class="cover">
+                        <div class="cover_img">
+                            <img src="img/Portadas/LCDP.jpg" alt="">
+                        </div>
+                        <header>
+                            <h4>La casa de papel</h4>
+                        </header>
+                    </div>
+                    <div class="cover">
+                        <div class="cover_img">
+                            <img src="img/Portadas/YOU.jpg" alt="">
+                        </div>
+                        <header>
+                            <h4>You</h4>
+                        </header>
+                    </div>
+                    <div class="cover">
+                        <div class="cover_img">
+                            <img src="img/Portadas/sabrina-parte-3-poster.jpg" alt="">
+                        </div>
+                        <header>
+                            <h4>Sabrina</h4>
+                        </header>
+                    </div>
+                    <div class="cover">
+                        <div class="cover_img">
+                            <img src="img/Portadas/STRANGER THINGS.jpg" alt="">
+                        </div>
+                        <header>
+                            <h4>Stranger things</h4>
+                        </header>
+                    </div>
+                    <div class="cover">
+                        <div class="cover_img">
+                            <img src="img/Portadas/lucifer-series-6-poster-1628105867.jpg" alt="">
+                        </div>
+                        <header>
+                            <h4>Lucifer</h4>
+                        </header>
+                    </div>                    
+                </div>
+            </div>
+        </section>
+        <section id="#Plataformas">
+            <h3>Plataformas</h3>
+            <div class="containerp">
+                <div class="plataformas">
+                    <div class="plataformas_img">
+                        <img src="img/Plataformas/HBO_Max.jpg" alt="">
+                    </div>
+                    <header>
+                        <h4>HBO max</h4>
+                    <blockquote>
+                        "HBO Max es un servicio de suscripción de video a la carta en streaming propiedad de Warner Media, una división de AT&T."
+                    </blockquote>
+                    </header>
+                </div>
+                <div class="plataformas">
+                    <div class="plataformas_img">
+                        <img src="img/Plataformas/netflix.jpg" alt="">
+                    </div>
+                    <header>
+                        <h4>Netflix</h4>
+                    <blockquote>
+                            "Netflix, es una plataforma de entretenimiento a nivel mundial, cuyo servicio es la distribución de contenidos audiovisuales en línea."
+                    </blockquote>
+                    </header>
+                </div>
+                <div class="plataformas">
+                    <div class="plataformas_img">
+                        <img src="img/Plataformas/primevideo.jpg" alt="">
+                    </div>
+                    <header>
+                        <h4>Prime Video</h4>
+                    <blockquote>
+                            "Prime Video, es un servicio de videos disponible en retransmisión en directo, creado y gestionado por Amazon."
+                    </blockquote>
+                    </header>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="#Redessociales">
+        <div class="container2">
+            <h3>Redes sociales</h3>
+            <h5><a href="#">twitter</a></h5>
+            <h5><a href="#">instagram</a></h5>
+            <h5><a href="#">facebook</a></h5>
+        </div>
+    </footer>
+</body>
+</html>
